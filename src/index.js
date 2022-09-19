@@ -22,4 +22,16 @@ const renderHeader = () => {
 	document.body.insertBefore(header, content);
 }
 
+const renderFooter = () => {
+	const footer = document.createElement('footer');
+	footer.id = 'footer';
+
+	const footerText = document.createElement('p');
+	footerText.innerHTML = 'Made by <a href="https://xinweny.github.com">xinweny<a> in 2022'
+	footer.appendChild(footerText);
+
+	document.body.appendChild(footer);
+}
+
 renderHeader();
+renderFooter()
