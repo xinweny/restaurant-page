@@ -1,6 +1,7 @@
 import * as helper from './helperFunctions.js';
 
-const renderContact = () => {
+const renderContact = event => {
+	helper.clearContent();
 	console.log("Contact");
 }
 
