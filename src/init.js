@@ -27,8 +27,15 @@ const renderFooter = () => {
 	footer.id = 'footer';
 
 	const footerText = document.createElement('p');
-	footerText.innerHTML = 'Made by <a href="https://xinweny.github.com">xinweny<a> in 2022'
+	footerText.innerHTML = 'Made by <a href="https://github.com/xinweny">xinweny<a> in 2022'
 	footer.appendChild(footerText);
+
+	const projectLink = document.createElement('a');
+	projectLink.href = 'https://github.com/xinweny/restaurant-page';
+	const githubLogo = new Image();
+	githubLogo.src = '../assets/github.png';
+	projectLink.appendChild(githubLogo);
+	footer.append(projectLink);
 
 	document.body.appendChild(footer);
 }
