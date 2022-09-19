@@ -1,0 +1,1 @@
+import { renderHome } from './home.js';
