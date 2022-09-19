@@ -52,6 +52,7 @@ const initApp = () => {
 	renderHeader();
 	renderFooter();
 	addTabEvtListeners();
+	document.querySelector('#header li').click();
 }
 
 export default initApp;
