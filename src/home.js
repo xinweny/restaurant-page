@@ -1,5 +1,5 @@
 const renderHome = () => {
-	console.log("Hi");
+	console.log("Home");
 }
 
-export { renderHome };
+export default renderHome;
