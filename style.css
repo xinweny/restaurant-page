@@ -6,3 +6,9 @@
 li {
 	list-style-type: none;
 }
+
+#tabs {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
