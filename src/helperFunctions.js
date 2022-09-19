@@ -14,3 +14,11 @@ export function toggleClick(target) {
 		}
 	}
 }
+
+export function createContentDiv(id) {
+	const div = document.createElement('div');
+	div.id = id;
+	div.classList.add('content-div');
+
+	return div;
+}
