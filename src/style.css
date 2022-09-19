@@ -3,8 +3,24 @@
 	padding: 0;
 }
 
+body {
+	height: 100vh;
+	background-image: url('../assets/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+}
+
 li {
 	list-style-type: none;
+}
+
+#content {
+	flex: 1 1 auto;
+	overflow-y: auto;
+	height: 0px;
 }
 
 #tabs {

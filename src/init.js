@@ -19,7 +19,13 @@ const renderHeader = () => {
 	}
 	header.appendChild(tabs);
 
-	document.body.insertBefore(header, content);
+	document.body.appendChild(header);
+}
+
+const renderContent = () => {
+	const content = document.createElement('div');
+	content.id = 'content';
+	document.body.appendChild(content);
 }
 
 const renderFooter = () => {
@@ -50,6 +56,7 @@ const addTabEvtListeners = () => {
 
 const initApp = () => {
 	renderHeader();
+	renderContent();
 	renderFooter();
 	addTabEvtListeners();
 	document.querySelector('#header li').click();
