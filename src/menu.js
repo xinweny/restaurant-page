@@ -1,8 +1,9 @@
 import * as helper from './helperFunctions.js';
 
-const renderMenu = () => {
+const renderMenu = event => {
 	helper.clearContent();
-	console.log("Menu")
+	helper.toggleClick(event.target);
+	console.log("Menu");
 }
 
 export default renderMenu;
