@@ -20,7 +20,7 @@ const renderHeader = () => {
 	}
 	header.appendChild(tabs);
 
-	content.appendChild(header);
+	document.body.insertBefore(header, content);
 }
 
 renderHeader();
