@@ -12,7 +12,7 @@ const renderHeader = () => {
 
 	const tabs = document.createElement('ul');
 	tabs.id = 'tabs';
-	for (const tabText of ['Home', 'Menu', 'Content']) {
+	for (const tabText of ['Home', 'Menu', 'Contact']) {
 		let tab = document.createElement('li');
 		tab.textContent = tabText;
 		tabs.appendChild(tab);
@@ -40,9 +40,18 @@ const renderFooter = () => {
 	document.body.appendChild(footer);
 }
 
+const addTabEvtListeners = () => {
+	const buttons = Array.from(document.querySelectorAll('#header li'));
+
+	buttons[0].addEventListener('click', renderHome);
+	buttons[1].addEventListener('click', renderMenu);
+	buttons[2].addEventListener('click', renderContact);
+}
+
 const initApp = () => {
 	renderHeader();
 	renderFooter();
+	addTabEvtListeners();
 }
 
 export default initApp;
