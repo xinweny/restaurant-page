@@ -2,13 +2,27 @@ import renderHome from './home.js';
 import renderMenu from './menu.js';
 import renderContact from './contact.js';
 
+const addCrest = (parentNode) => {
+	const crest = new Image();
+	crest.classList.add('crest');
+	crest.src = '../assets/crest.png';
+
+	parentNode.appendChild(crest);
+}
+
 const renderHeader = () => {
 	const header = document.createElement('div');
 	header.id = 'header';
 
+	const div = document.createElement('div');
+
+	addCrest(div);
 	const title = document.createElement('h1');
 	title.textContent = 'Breath of the Wok';
-	header.appendChild(title);
+	div.appendChild(title);
+	addCrest(div);
+
+	header.appendChild(div);
 
 	const tabs = document.createElement('ul');
 	tabs.id = 'tabs';

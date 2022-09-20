@@ -40,7 +40,18 @@ body {
 	flex: none;
 }
 
-#header > h1 {
+#header > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.crest {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+#header h1 {
 	text-align: center;
 	margin: 16px;
 	font-family: 'TheWildBreathOfZelda';
