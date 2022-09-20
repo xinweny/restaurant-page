@@ -2,10 +2,12 @@ import renderHome from './home.js';
 import renderMenu from './menu.js';
 import renderContact from './contact.js';
 
+import crestSrc from '../assets/crest.png';
+
 const addCrest = (parentNode) => {
 	const crest = new Image();
 	crest.classList.add('crest');
-	crest.src = '../assets/crest.png';
+	crest.src = crestSrc;
 
 	parentNode.appendChild(crest);
 }

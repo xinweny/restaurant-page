@@ -1,9 +1,13 @@
 import * as helper from './helperFunctions.js';
 
+const cache = {};
+const importAll = r => r.keys().forEach((key) => (cache[key] = r(key)));
+importAll(require.context('../assets/food', true, /\.png$/));
+
 function Food(name, price, description) {
 	const kebabCase = name => name.toLowerCase().replaceAll(' ', '-');
 
-	const src = `../assets/food/${kebabCase(name)}.png`;
+	const src = cache[`./${kebabCase(name)}.png`];
 
 	return { 
 		name,

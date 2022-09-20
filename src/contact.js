@@ -1,5 +1,8 @@
 import * as helper from './helperFunctions.js';
 
+import profileSrc from '../assets/profile-pic.jpeg';
+import mapSrc from '../assets/map.jpeg';
+
 const renderContact = event => {
 	helper.clearContent();
 	helper.toggleClick(event.target);
@@ -20,7 +23,7 @@ const renderContact = event => {
 	contactCard.appendChild(div);
 
 	const profilePic = new Image();
-	profilePic.src = '../assets/profile-pic.jpeg';
+	profilePic.src = profileSrc;
 	contactCard.appendChild(profilePic);
 
 	contactDiv.appendChild(contactCard);
@@ -29,7 +32,7 @@ const renderContact = event => {
 	mapCard.classList.add('map-card');
 
 	const map = new Image();
-	map.src = '../assets/map.jpeg';
+	map.src = mapSrc;
 	mapCard.appendChild(map);
 
 	contactDiv.appendChild(mapCard);
