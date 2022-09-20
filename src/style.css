@@ -73,6 +73,11 @@ li {
 	justify-content: space-around;
 	width: 500px;
 	margin: auto;
+	padding: 32px;
+}
+
+#home-div p {
+	text-align: center;
 }
 
 .chef-img {
@@ -114,10 +119,18 @@ li {
 
 .food-card .price {
 	font-size: 1rem;
+	text-align: right;
 }
 
 .price::before {
 	content: url('../assets/rupee.png');
+	margin-right: 4px;
+}
+
+.food-card div {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 #contact-div {
@@ -127,7 +140,7 @@ li {
 	align-items: center;
 	gap: 32px;
 	margin: auto;
-	padding: 16px;
+	padding: 32px;
 }
 
 .contact-card {

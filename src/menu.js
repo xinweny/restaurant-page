@@ -19,7 +19,7 @@ const createFoodCard = food => {
 	
 	const foodName = document.createElement('h2');
 	foodName.textContent = food.name;
-	
+
 	const foodDesc = document.createElement('p');
 	foodDesc.textContent = food.description;
 
@@ -30,7 +30,11 @@ const createFoodCard = food => {
 	const foodImg = new Image();
 	foodImg.src = food.src;
 
-	for (const element of [foodName, foodPrice, foodDesc, foodImg]) {
+	const div = document.createElement('div');
+	div.appendChild(foodImg);
+	div.appendChild(foodPrice);
+
+	for (const element of [foodName, div, foodDesc]) {
 		card.appendChild(element);
 	}
 
