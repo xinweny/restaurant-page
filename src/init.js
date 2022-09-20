@@ -3,6 +3,7 @@ import renderMenu from './menu.js';
 import renderContact from './contact.js';
 
 import crestSrc from '../assets/crest.png';
+import ghSrc from '../assets/github.png';
 
 const addCrest = (parentNode) => {
 	const crest = new Image();
@@ -55,7 +56,7 @@ const renderFooter = () => {
 	const projectLink = document.createElement('a');
 	projectLink.href = 'https://github.com/xinweny/restaurant-page';
 	const githubLogo = new Image();
-	githubLogo.src = '../assets/github.png';
+	githubLogo.src = ghSrc;
 	projectLink.appendChild(githubLogo);
 	footer.append(projectLink);
 
