@@ -22,3 +22,8 @@ export function createContentDiv(id) {
 
 	return div;
 }
+
+export function appendToContent(node) {
+	const content = document.getElementById('content');
+	content.appendChild(node);
+}

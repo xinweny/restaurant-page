@@ -3,8 +3,6 @@ import * as helper from './helperFunctions.js';
 const renderHome = event => {
 	helper.clearContent();
 	helper.toggleClick(event.target);
-
-	const content = document.getElementById('content');
 	
 	const introDiv = helper.createContentDiv('home-div');
 
@@ -14,10 +12,10 @@ const renderHome = event => {
 	introDiv.append(chefPic);
 
 	const introText = document.createElement('p');
-	introText.textContent = 'Serving delicious, rustic meals made from the best ingredients across Hyrule. Our ingredients are foraged and hunted daily for the best quality and freshness. Our cooking represents a diverse range of local dishes from the many regions of our vast land.';
+	introText.textContent = 'Serving delicious, rustic meals made from the best ingredients across the Hyrule wilderness. We cook a wide selection of dishes representing the diverse regions of our land.';
 	introDiv.appendChild(introText);
 
-	content.appendChild(introDiv);
+	helper.appendToContent(introDiv);
 }
 
 export default renderHome;
